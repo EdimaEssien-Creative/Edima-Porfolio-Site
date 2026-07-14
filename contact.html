@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work With Me — Edima Essien</title>
+<meta name="description" content="Start a project with Edima Essien. Multi-step brief, pricing tiers, and booking for AI product design and creative front-end builds.">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:#eef0f6; -webkit-font-smoothing:antialiased; }
+  [data-reveal]{ opacity:0; transform:translateY(28px); transition:opacity 1s cubic-bezier(.16,1,.3,1), transform 1s cubic-bezier(.16,1,.3,1); }
+  [data-reveal].rv{ opacity:1; transform:none; }
+  input::placeholder, textarea::placeholder { color:#8890a3; }
+  /* flip-card 3D mechanics — kept in real CSS so backface-visibility & preserve-3d apply reliably */
+  .svc-inner { transform-style:preserve-3d; -webkit-transform-style:preserve-3d; }
+  .svc-face { -webkit-backface-visibility:hidden; backface-visibility:hidden; }
+  /* front face themes from CSS vars; on hover the whole card UI shifts to the dark version */
+  .svc-front { background:var(--bg); border:1px solid var(--bd); color:var(--ink); transition:background .4s ease, border-color .4s ease, color .4s ease; }
+  .svc:hover .svc-front {
+    --bg:#15142a; --bd:#6d5ef0; --ink:#eef0f8; --sub:#a9a8c8; --body:#d6d4ee;
+    --chip:#d6d4ee; --chipbd:rgba(255,255,255,.2); --accent:#a855f7; --tile:rgba(168,85,247,.16); --rule:rgba(255,255,255,.14);
+  }
+  @keyframes spin360 { to { transform:rotate(360deg); } }
+  @keyframes pulseDot { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  .opt:hover { border-color:#6d5ef0 !important; }
+  .slot:hover { border-color:#6d5ef0 !important; }
+  @media (max-width: 900px) {
+    nav[style*="padding:20px"] { padding: 16px 20px !important; }
+    header[style*="padding:80px"] { padding: 60px 24px 24px !important; }
+    section[style*="padding:48px"] { padding: 32px 20px !important; }
+    section[style*="padding:70px"] { padding: 50px 20px 30px !important; }
+    section[style*="padding:40px"] { padding: 30px 20px !important; }
+    div[style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns:1fr 1fr"][class="optgrid"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns:1fr 1fr 1fr"][class="optgrid"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns:1fr 1fr"][style*="gap:14px"] { grid-template-columns: 1fr !important; }
+    footer[style*="padding:28px"] { padding: 24px !important; flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</helmet>
+
+<div style="background:#eef0f6; color:#1c1e27; font-family:'DM Sans',-apple-system,sans-serif; min-height:100vh; position:relative; overflow-x:hidden;">
+
+  <div style="position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.5; background-image:url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E&quot;);"></div>
+
+  <!-- NAV -->
+  <nav style="position:sticky; top:0; z-index:100; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:rgba(238,240,246,.82); backdrop-filter:blur(14px); border-bottom:1px solid #d2d6e3;">
+    <a href="index.html" style="display:inline-flex; align-items:center; gap:9px; color:#525569; text-decoration:none; font-size:13.5px;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
+    </a>
+    <div style="font-family:'Instrument Serif',Georgia,serif; font-size:22px; letter-spacing:-.01em;">Edima Essien</div>
+    <a href="#booking" style="background:#1c1e27; color:#f4f5fb; text-decoration:none; font-size:13.5px; padding:11px 22px; border-radius:100px; white-space:nowrap;">Book a call</a>
+  </nav>
+
+  <!-- HERO -->
+  <header style="max-width:880px; margin:0 auto; padding:80px 40px 30px; text-align:center;">
+    <div data-reveal style="display:flex; align-items:center; gap:9px; justify-content:center; margin-bottom:22px;"><span style="width:7px; height:7px; border-radius:50%; background:linear-gradient(135deg,#6d5ef0,#a855f7);"></span><span style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6d5ef0;">Start a Project</span></div>
+    <h1 data-reveal data-reveal-delay="80" style="font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.8rem,6.5vw,5.4rem); line-height:1.0; letter-spacing:-.03em; position:relative;">Let's build something <em style="font-style:italic; background:linear-gradient(135deg,#6d5ef0,#a855f7); -webkit-background-clip:text; background-clip:text; color:transparent;">together</em></h1>
+    <div style="position:absolute; top:-160px; left:50%; transform:translateX(-50%); width:640px; height:400px; background:radial-gradient(ellipse closest-side, rgba(109,94,240,.18), transparent 70%); filter:blur(30px); pointer-events:none; z-index:-1;"></div>
+    <p data-reveal data-reveal-delay="180" style="max-width:540px; margin:26px auto 0; color:#5b606f; font-size:17px; line-height:1.7; font-weight:300;">Answer a few questions so I can come prepared, then take a look at pricing and grab a time that works. We'll figure out the rest together on the call.</p>
+  </header>
+
+  <!-- PROJECT BRIEF FORM -->
+  <section id="briefSection" style="max-width:760px; margin:0 auto; padding:48px 40px 40px;">
+    <div id="briefCard" data-reveal style="background:#f4f5fa; border:1px solid #d8dbe6; border-radius:22px; padding:clamp(28px,4vw,48px); box-shadow:0 24px 60px rgba(40,38,70,.10);">
+
+      <!-- progress -->
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:34px;">
+        <div id="bar" style="flex:1; height:4px; background:#dde0ea; border-radius:100px; overflow:hidden;"><div id="barfill" style="height:100%; width:25%; background:linear-gradient(90deg,#6d5ef0,#a855f7); border-radius:100px; transition:width .5s cubic-bezier(.16,1,.3,1);"></div></div>
+        <span id="stepnum" style="font-family:'DM Mono',monospace; font-size:12px; color:#6d5ef0; white-space:nowrap;">01 / 04</span>
+      </div>
+
+      <!-- STEP 1: project type -->
+      <div class="step" data-step="1">
+        <div style="font-family:'Instrument Serif',serif; font-size:clamp(1.5rem,3vw,2rem); margin-bottom:8px; letter-spacing:-.01em;">What kind of project is it?</div>
+        <p style="color:#6f7488; font-size:14.5px; margin-bottom:24px;">Pick the closest fit — we'll get specific on the call.</p>
+        <div class="optgrid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="opt" data-field="projectType" data-value="Creative Front-End Build" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:20px; transition:border-color .2s, background .2s;"><div style="font-size:15px; font-weight:500; margin-bottom:5px;">Tier one · Creative Front-End Build</div><div style="font-size:12.5px; color:#6f7488; line-height:1.4;">Design, branding, React/Next.js build</div></div>
+          <div class="opt" data-field="projectType" data-value="Custom LLM, Copilots &amp; Agents" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:20px; transition:border-color .2s, background .2s;"><div style="font-size:15px; font-weight:500; margin-bottom:5px;">Tier two · Custom LLM, Copilots &amp; Agents</div><div style="font-size:12.5px; color:#6f7488; line-height:1.4;">Everything in tier one, plus AI backend</div></div>
+          <div class="opt" data-field="projectType" data-value="Spatial &amp; Motion" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:20px; transition:border-color .2s, background .2s;"><div style="font-size:15px; font-weight:500; margin-bottom:5px;">Spatial &amp; Motion</div><div style="font-size:12.5px; color:#6f7488; line-height:1.4;">3D twins, motion, interaction design</div></div>
+          <div class="opt" data-field="projectType" data-value="Not sure yet" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:20px; transition:border-color .2s, background .2s;"><div style="font-size:15px; font-weight:500; margin-bottom:5px;">Not sure yet</div><div style="font-size:12.5px; color:#6f7488; line-height:1.4;">Let's figure it out together</div></div>
+        </div>
+      </div>
+
+      <!-- STEP 2: scope + timeline -->
+      <div class="step" data-step="2" style="display:none;">
+        <div style="font-family:'Instrument Serif',serif; font-size:clamp(1.5rem,3vw,2rem); margin-bottom:8px; letter-spacing:-.01em;">Scope &amp; timeline</div>
+        <p style="color:#6f7488; font-size:14.5px; margin-bottom:24px;">Roughly where are you, and how soon?</p>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:#8890a3; margin-bottom:10px;">Engagement</div>
+        <div class="optgrid" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:24px;">
+          <div class="opt" data-field="engagement" data-value="Design only" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:12px; padding:15px; text-align:center; transition:border-color .2s, background .2s;"><div style="font-size:14px; font-weight:500;">Design only</div><div style="font-size:11.5px; color:#6f7488;">Prototype &amp; handoff</div></div>
+          <div class="opt" data-field="engagement" data-value="Design + build" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:12px; padding:15px; text-align:center; transition:border-color .2s, background .2s;"><div style="font-size:14px; font-weight:500;">Design + build</div><div style="font-size:11.5px; color:#6f7488;">Shipped front-end</div></div>
+          <div class="opt" data-field="engagement" data-value="Not sure" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:12px; padding:15px; text-align:center; transition:border-color .2s, background .2s;"><div style="font-size:14px; font-weight:500;">Not sure</div><div style="font-size:11.5px; color:#6f7488;">Advise me</div></div>
+        </div>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:#8890a3; margin-bottom:10px;">Timeline</div>
+        <div class="optgrid" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+          <div class="opt" data-field="timeline" data-value="ASAP" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:12px; padding:13px; text-align:center; transition:border-color .2s, background .2s; font-size:14px;">ASAP</div>
+          <div class="opt" data-field="timeline" data-value="1–2 months" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:12px; padding:13px; text-align:center; transition:border-color .2s, background .2s; font-size:14px;">1–2 months</div>
+          <div class="opt" data-field="timeline" data-value="Exploring" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:12px; padding:13px; text-align:center; transition:border-color .2s, background .2s; font-size:14px;">Just exploring</div>
+        </div>
+      </div>
+
+      <!-- STEP 3: budget -->
+      <div class="step" data-step="3" style="display:none;">
+        <div style="font-family:'Instrument Serif',serif; font-size:clamp(1.5rem,3vw,2rem); margin-bottom:8px; letter-spacing:-.01em;">Ballpark budget</div>
+        <p style="color:#6f7488; font-size:14.5px; margin-bottom:24px;">Helps me recommend the right engagement. See full pricing below.</p>
+        <div class="optgrid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="opt" data-field="budget" data-value="< €5k" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:18px; transition:border-color .2s, background .2s; font-size:15px; font-weight:500;">Under €5k</div>
+          <div class="opt" data-field="budget" data-value="€5k–€8k" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:18px; transition:border-color .2s, background .2s; font-size:15px; font-weight:500;">€5k – €8k</div>
+          <div class="opt" data-field="budget" data-value="€8k–€12k" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:18px; transition:border-color .2s, background .2s; font-size:15px; font-weight:500;">€8k – €12k</div>
+          <div class="opt" data-field="budget" data-value="€12k+" style="cursor:pointer; border:1px solid #d8dbe6; border-radius:14px; padding:18px; transition:border-color .2s, background .2s; font-size:15px; font-weight:500;">€12k+</div>
+        </div>
+      </div>
+
+      <!-- STEP 4: details -->
+      <div class="step" data-step="4" style="display:none;">
+        <div style="font-family:'Instrument Serif',serif; font-size:clamp(1.5rem,3vw,2rem); margin-bottom:8px; letter-spacing:-.01em;">A little about you</div>
+        <p style="color:#6f7488; font-size:14.5px; margin-bottom:24px;">So I can follow up and prep for our call.</p>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <input id="f_name" type="text" placeholder="Your name" style="background:#fff; border:1px solid #d8dbe6; border-radius:11px; padding:14px 16px; font-family:'DM Sans',sans-serif; font-size:15px; color:#1c1e27; outline:none;" style-focus="border-color:#6d5ef0;">
+            <input id="f_email" type="email" placeholder="you@company.com" style="background:#fff; border:1px solid #d8dbe6; border-radius:11px; padding:14px 16px; font-family:'DM Sans',sans-serif; font-size:15px; color:#1c1e27; outline:none;" style-focus="border-color:#6d5ef0;">
+          </div>
+          <input id="f_company" type="text" placeholder="Company / project name (optional)" style="background:#fff; border:1px solid #d8dbe6; border-radius:11px; padding:14px 16px; font-family:'DM Sans',sans-serif; font-size:15px; color:#1c1e27; outline:none;" style-focus="border-color:#6d5ef0;">
+          <textarea id="f_details" rows="4" placeholder="What are you building, and what does success look like?" style="background:#fff; border:1px solid #d8dbe6; border-radius:11px; padding:14px 16px; font-family:'DM Sans',sans-serif; font-size:15px; color:#1c1e27; outline:none; resize:vertical;" style-focus="border-color:#6d5ef0;"></textarea>
+        </div>
+      </div>
+
+      <!-- nav buttons -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-top:30px;">
+        <button id="backBtn" onClick="{{ onBack }}" style="background:transparent; border:none; color:#6f7488; font-family:'DM Sans',sans-serif; font-size:14px; cursor:pointer; padding:10px 4px; visibility:hidden;">← Back</button>
+        <button id="nextBtn" onClick="{{ onNext }}" style="display:inline-flex; align-items:center; gap:10px; background:#1c1e27; color:#f4f5fb; border:none; border-radius:100px; padding:14px 30px; font-family:'DM Sans',sans-serif; font-size:14px; cursor:pointer;">
+          <span id="nextLabel">Continue</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+      <div id="formMsg" style="font-size:13.5px; color:#6d5ef0; margin-top:14px; min-height:18px;"></div>
+    </div>
+
+    <!-- thank-you (replaces brief after submit) -->
+    <div id="thanksCard" style="display:none; background:linear-gradient(135deg,#eef0f8 0%,#e6e4f7 55%,#ede0fb 100%); border:1px solid #d6cdf5; border-radius:22px; padding:clamp(34px,5vw,56px); text-align:center; position:relative; overflow:hidden; box-shadow:0 24px 60px rgba(40,38,70,.10);">
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 46% 70% at 82% 16%, rgba(168,85,247,.22), transparent 68%); pointer-events:none;"></div>
+      <div style="position:relative;">
+        <div style="width:56px; height:56px; border-radius:50%; background:#1c1e27; color:#f4f5fb; display:flex; align-items:center; justify-content:center; margin:0 auto 22px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(2rem,4vw,3rem); font-weight:400; letter-spacing:-.02em; line-height:1.05;">Thank you, <span id="thanksName">there</span> — <em style="font-style:italic; background:linear-gradient(135deg,#6d5ef0,#a855f7); -webkit-background-clip:text; background-clip:text; color:transparent;">I can't wait to meet you</em></h2>
+        <p style="max-width:480px; margin:20px auto 0; color:#5b606f; font-size:16px; line-height:1.7; font-weight:300;">I've got your brief and I'm genuinely excited to dig into what you're building. The last step is picking a time below, and I'll come to the call prepared with first thoughts and a clear recommendation.</p>
+        <a href="#booking" style="position:relative; display:inline-flex; align-items:center; gap:10px; margin-top:30px; background:#1c1e27; color:#f4f5fb; text-decoration:none; font-size:15px; padding:15px 34px; border-radius:100px;">Book our call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></a>
+        <div style="position:relative; font-size:13px; color:#8890a3; margin-top:18px;">A confirmation will also land in your inbox.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="max-width:1180px; margin:0 auto; padding:70px 40px 40px;">
+    <div data-reveal style="text-align:center; margin-bottom:48px;">
+      <div style="display:flex; align-items:center; gap:9px; justify-content:center; margin-bottom:18px;"><span style="width:7px; height:7px; border-radius:50%; background:linear-gradient(135deg,#6d5ef0,#a855f7);"></span><span style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6d5ef0;">Services &amp; Pricing</span></div>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(2.2rem,4.5vw,3.4rem); font-weight:400; letter-spacing:-.02em;">Two tiers, and a <em style="font-style:italic; background:linear-gradient(135deg,#6d5ef0,#a855f7); -webkit-background-clip:text; background-clip:text; color:transparent;">parallel track</em></h2>
+      <p style="max-width:560px; margin:18px auto 0; color:#5b606f; font-size:16px; line-height:1.7; font-weight:300;">Tier two builds on tier one — same design foundation, plus the AI backend. Spatial &amp; motion work runs alongside either, as its own set of modules. I take on one project at a time, so it gets my full attention.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:stretch;">
+
+      <!-- TIER 1 — Creative Front-End Build -->
+      <div style="display:flex; flex-direction:column;" data-reveal>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px; font-family:'DM Mono',ui-monospace,monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:#6d5ef0;">
+          <span style="width:22px; height:22px; border-radius:50%; background:rgba(109,94,240,.14); display:flex; align-items:center; justify-content:center; font-size:10px; font-family:'DM Mono',monospace;">1</span> Tier one
+        </div>
+        <div class="svc" data-svc="Creative Front-End Build" style="perspective:1800px; min-height:900px; flex:1;">
+        <div class="svc-inner" style="position:relative; width:100%; height:100%; min-height:900px; transition:transform .8s cubic-bezier(.7,0,.3,1); transform-style:preserve-3d;">
+
+          <!-- FRONT -->
+          <div class="svc-face svc-front" style="--bg:#f4f5fa; --bd:#d8dbe6; --ink:#1c1e27; --sub:#8890a3; --body:#5b606f; --chip:#5b606f; --chipbd:#d2d6e3; --accent:#6d5ef0; --tile:#e4e1fb; --rule:#dde0ea; position:absolute; inset:0; border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; cursor:pointer;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--tile); display:flex; align-items:center; justify-content:center; color:var(--accent); margin-bottom:18px; transition:background .4s ease, color .4s ease;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3 style="font-family:'Instrument Serif',serif; font-size:1.7rem; font-weight:400; letter-spacing:-.01em; line-height:1.05;">Creative front-end build</h3>
+            <div style="font-size:13px; color:var(--sub); margin-top:6px;">Figma · Branding · React/Next.js</div>
+            <p style="font-size:14px; color:var(--body); line-height:1.6; margin-top:16px; font-weight:300;">The design foundation, start to finish: brand identity, interface, and a working front-end from one person.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:18px;">
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Figma</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Branding</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Design systems</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">React</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Next.js</span>
+            </div>
+            <div style="height:1px; background:var(--rule); margin:20px 0; transition:background .4s ease;"></div>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:9px;">
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Async discovery questionnaire + user flow mapping</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Up to 10 screens, every state — empty, loading, error, success</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Figma component library with design tokens</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Clickable prototype</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> 2 rounds of revisions, one consolidated pass each</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Dev handoff: Figma dev-mode file, assets, spec doc, working repo</li>
+            </ul>
+            <div style="flex:1;"></div>
+            <div style="height:1px; background:var(--rule); margin:20px 0; transition:background .4s ease;"></div>
+            <div style="min-height:56px;"><span style="font-family:'Instrument Serif',serif; font-size:2.4rem; line-height:1;">€8,500</span><div style="font-size:13px; color:var(--sub); margin-top:4px;">3 to 4 weeks</div></div>
+            <button class="svc-flip" style="margin-top:18px; align-self:flex-end; display:inline-flex; align-items:center; gap:8px; background:transparent; border:none; color:var(--accent); font-family:'DM Sans',sans-serif; font-size:13px; cursor:pointer; padding:0; transition:color .4s ease;">Flip for details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 9 8 9"/></svg></button>
+          </div>
+
+          <!-- BACK -->
+          <div class="svc-face svc-back" style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; transform:rotateY(180deg); background:#15142a; color:#eef0f8; border:1px solid #6d5ef0; border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; overflow-y:auto;">
+            <div style="font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:#a855f7; margin-bottom:8px;">Tier one · Creative front-end build</div>
+            <h3 style="font-family:'Instrument Serif',serif; font-size:1.5rem; font-weight:400; line-height:1.15; letter-spacing:-.01em;">Design and front-end, handled as one continuous process.</h3>
+            <p style="font-size:13.5px; color:#b8bcd6; line-height:1.7; margin-top:16px; font-weight:300;">This is the foundation tier: brand identity, interface design, and a production ready front end, all from one person. I design in Figma, then build it myself in React or Next.js, so nothing gets lost between the two.</p>
+            <p style="font-size:13.5px; color:#b8bcd6; line-height:1.7; margin-top:12px; font-weight:300;">You leave with a clean GitHub repository, a deployed URL, and a component library that documents the system for anyone who touches it next.</p>
+            <div style="margin-top:18px;">
+              <div style="font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:#9b8ec9; margin-bottom:8px;">How the 4 weeks break down</div>
+              <div style="display:flex; gap:6px;">
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 1</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">Discovery &amp; flows</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 2</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">UI design</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 3</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">Prototype + rev. 1</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 4</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">Rev. 2, build &amp; handoff</div></div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:14px 16px; background:rgba(168,85,247,.14); border-radius:11px; font-size:12.5px; color:#d6d4ee; line-height:1.55;"><strong style="color:#a855f7;">Best for:</strong> Founders launching a first product, brands needing a refreshed site, teams who want one person accountable for design and code.</div>
+            <div style="flex:1;"></div>
+            <div style="display:flex; align-items:center; gap:12px; margin-top:20px;">
+              <a href="#booking" style="display:inline-flex; align-items:center; gap:8px; background:#a855f7; color:#15142a; text-decoration:none; font-size:13.5px; padding:12px 22px; border-radius:100px; font-weight:500;">Book this</a>
+              <button class="svc-flip" style="display:inline-flex; align-items:center; gap:7px; background:transparent; border:none; color:#a9a8c8; font-family:'DM Sans',sans-serif; font-size:13px; cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-9-9"/><polyline points="21 4 21 9 16 9"/></svg> Back</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- TIER 2 — Custom LLM, Copilots & Agents -->
+      <div style="display:flex; flex-direction:column;" data-reveal data-reveal-delay="100">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px; font-family:'DM Mono',ui-monospace,monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:#6d5ef0;">
+          <span style="width:22px; height:22px; border-radius:50%; background:rgba(109,94,240,.14); display:flex; align-items:center; justify-content:center; font-size:10px; font-family:'DM Mono',monospace;">2</span> Tier two · builds on tier one
+        </div>
+        <div class="svc" data-svc="Custom LLM, Copilots &amp; Agents" style="perspective:1800px; min-height:900px; flex:1;">
+        <div class="svc-inner" style="position:relative; width:100%; height:100%; min-height:900px; transition:transform .8s cubic-bezier(.7,0,.3,1); transform-style:preserve-3d;">
+
+          <!-- FRONT -->
+          <div class="svc-face svc-front" style="--bg:#f4f5fa; --bd:#d8dbe6; --ink:#1c1e27; --sub:#8890a3; --body:#5b606f; --chip:#5b606f; --chipbd:#d2d6e3; --accent:#6d5ef0; --tile:#e4e1fb; --rule:#dde0ea; position:absolute; inset:0; border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; cursor:pointer;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--tile); display:flex; align-items:center; justify-content:center; color:var(--accent); margin-bottom:18px; transition:background .4s ease, color .4s ease;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="7" width="16" height="13" rx="2.5"/><path d="M12 7V3"/><circle cx="9" cy="13" r="1.2" fill="currentColor"/><circle cx="15" cy="13" r="1.2" fill="currentColor"/></svg></div>
+            <h3 style="font-family:'Instrument Serif',serif; font-size:1.7rem; font-weight:400; letter-spacing:-.01em; line-height:1.05;">Custom LLM, copilots &amp; agents</h3>
+            <div style="font-size:13px; color:var(--sub); margin-top:6px;">Everything in tier one, plus the AI backend</div>
+            <p style="font-size:14px; color:var(--body); line-height:1.6; margin-top:16px; font-weight:300;">Same design and front-end as tier one, then the AI layer: agents, copilots, and the data views that make them usable.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:18px;">
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">LLM agents</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Dashboards</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Prompt design</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Deployment</span>
+            </div>
+            <div style="height:1px; background:var(--rule); margin:20px 0; transition:background .4s ease;"></div>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:9px;">
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--accent); font-weight:500; line-height:1.35;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Everything in tier one</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Async technical discovery — data, model, integrations</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> LLM/agent backend + prompt architecture</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Dashboard &amp; data visualization build</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Model evaluation across key scenarios</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Deployment, infra setup &amp; handoff docs</li>
+            </ul>
+            <div style="flex:1;"></div>
+            <div style="height:1px; background:var(--rule); margin:20px 0; transition:background .4s ease;"></div>
+            <div style="min-height:56px;">
+              <div><span style="font-family:'Instrument Serif',serif; font-size:2.4rem; line-height:1; background:linear-gradient(135deg,#6d5ef0,#a855f7); -webkit-background-clip:text; background-clip:text; color:transparent;">€15,000</span><div style="font-size:13px; color:var(--sub); margin-top:4px;">5 to 6 weeks</div></div>
+            </div>
+            <button class="svc-flip" style="margin-top:18px; align-self:flex-end; display:inline-flex; align-items:center; gap:8px; background:transparent; border:none; color:var(--accent); font-family:'DM Sans',sans-serif; font-size:13px; cursor:pointer; padding:0; transition:color .4s ease;">Flip for details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 9 8 9"/></svg></button>
+          </div>
+
+          <!-- BACK -->
+          <div class="svc-face svc-back" style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; transform:rotateY(180deg); background:#15142a; color:#eef0f8; border:1px solid #6d5ef0; border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; overflow-y:auto;">
+            <div style="font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:#a855f7; margin-bottom:8px;">Tier two · Custom LLM, copilots &amp; agents</div>
+            <h3 style="font-family:'Instrument Serif',serif; font-size:1.5rem; font-weight:400; line-height:1.15; letter-spacing:-.01em;">The full stack for an AI native product, from one person.</h3>
+            <p style="font-size:13.5px; color:#b8bcd6; line-height:1.7; margin-top:16px; font-weight:300;">This tier starts exactly where tier one leaves off, with the same brand, interface design, and front end build. From there I take it further, wiring the LLM or agent backend, building out the dashboard and data views, and handling deployment.</p>
+            <p style="font-size:13.5px; color:#b8bcd6; line-height:1.7; margin-top:12px; font-weight:300;">Because one person owns the interface and the model behavior together, the two stay in sync — the UI never promises something the backend can't actually do.</p>
+            <div style="margin-top:18px;">
+              <div style="font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:#9b8ec9; margin-bottom:8px;">How the 6 weeks break down</div>
+              <div style="display:flex; gap:6px;">
+                <div style="flex:1.6; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 1–4</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">Tier one build</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 5</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">Backend + prompts</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">WK 6</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">Eval, deploy, handoff</div></div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:14px 16px; background:rgba(168,85,247,.14); border-radius:11px; font-size:12.5px; color:#d6d4ee; line-height:1.55;"><strong style="color:#a855f7;">Best for:</strong> Founders building an AI-native product, teams shipping an internal copilot or agent dashboard, anyone who needs design and model behavior designed together.</div>
+            <div style="flex:1;"></div>
+            <div style="display:flex; align-items:center; gap:12px; margin-top:20px;">
+              <a href="#booking" style="display:inline-flex; align-items:center; gap:8px; background:#a855f7; color:#15142a; text-decoration:none; font-size:13.5px; padding:12px 22px; border-radius:100px; font-weight:500;">Book this</a>
+              <button class="svc-flip" style="display:inline-flex; align-items:center; gap:7px; background:transparent; border:none; color:#a9a8c8; font-family:'DM Sans',sans-serif; font-size:13px; cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-9-9"/><polyline points="21 4 21 9 16 9"/></svg> Back</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- TIER 3 — Spatial & Motion (parallel track) -->
+      <div style="display:flex; flex-direction:column;" data-reveal data-reveal-delay="200">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px; font-family:'DM Mono',ui-monospace,monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:#7a7d95;">
+          <span style="width:22px; height:22px; border-radius:50%; border:1px solid #a8adc4; display:flex; align-items:center; justify-content:center; font-size:10px; font-family:'DM Mono',monospace; color:#7a7d95;">·</span> A parallel track
+        </div>
+        <div class="svc" data-svc="Spatial &amp; Motion" style="perspective:1800px; min-height:900px; flex:1;">
+        <div class="svc-inner" style="position:relative; width:100%; height:100%; min-height:900px; transition:transform .8s cubic-bezier(.7,0,.3,1); transform-style:preserve-3d;">
+
+          <!-- FRONT -->
+          <div class="svc-face svc-front" style="--bg:#f4f5fa; --bd:#d8dbe6; --ink:#1c1e27; --sub:#8890a3; --body:#5b606f; --chip:#5b606f; --chipbd:#d2d6e3; --accent:#6d5ef0; --tile:#e4e1fb; --rule:#dde0ea; position:absolute; inset:0; border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; cursor:pointer;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--tile); display:flex; align-items:center; justify-content:center; color:var(--accent); margin-bottom:18px; transition:background .4s ease, color .4s ease;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg></div>
+            <h3 style="font-family:'Instrument Serif',serif; font-size:1.7rem; font-weight:400; letter-spacing:-.01em; line-height:1.05;">Spatial &amp; motion</h3>
+            <div style="font-size:13px; color:var(--sub); margin-top:6px;">3D twins · Motion · Interaction design</div>
+            <p style="font-size:14px; color:var(--body); line-height:1.6; margin-top:16px; font-weight:300;">A separate specialty, rooted in my architecture background. Pick one module, or combine them — each scoped after a quick async brief.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:18px;">
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">3D digital twin</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Motion graphics</span>
+              <span style="padding:6px 12px; border:1px solid var(--chipbd); border-radius:100px; font-size:12px; color:var(--chip); transition:border-color .4s ease, color .4s ease;">Spatial interaction</span>
+            </div>
+            <div style="height:1px; background:var(--rule); margin:20px 0; transition:background .4s ease;"></div>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:9px;">
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Async scoping questionnaire per module</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> 3D digital twin, motion graphics, or spatial interaction</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Source files + rendered exports per module</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> 1 round of revisions per module</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Timeline scoped after brief, typically 2–4 weeks</li>
+              <li style="display:flex; gap:9px; font-size:13px; color:var(--body); line-height:1.35; transition:color .4s ease;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" style="flex:none; margin-top:1px; stroke:var(--accent);"><polyline points="20 6 9 17 4 12"/></svg> Can run alongside tier one or two</li>
+            </ul>
+            <div style="flex:1;"></div>
+            <div style="height:1px; background:var(--rule); margin:20px 0; transition:background .4s ease;"></div>
+            <div style="min-height:56px;"><span style="font-family:'Instrument Serif',serif; font-size:2.4rem; line-height:1;">From €4,500</span><div style="font-size:13px; color:var(--sub); margin-top:4px;">per module</div></div>
+            <button class="svc-flip" style="margin-top:18px; align-self:flex-end; display:inline-flex; align-items:center; gap:8px; background:transparent; border:none; color:var(--accent); font-family:'DM Sans',sans-serif; font-size:13px; cursor:pointer; padding:0; transition:color .4s ease;">Flip for details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 9 8 9"/></svg></button>
+          </div>
+
+          <!-- BACK -->
+          <div class="svc-face svc-back" style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; transform:rotateY(180deg); background:#15142a; color:#eef0f8; border:1px solid #6d5ef0; border-radius:20px; padding:30px 28px; display:flex; flex-direction:column; overflow-y:auto;">
+            <div style="font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:#a855f7; margin-bottom:8px;">A parallel track · Spatial &amp; motion</div>
+            <h3 style="font-family:'Instrument Serif',serif; font-size:1.5rem; font-weight:400; line-height:1.15; letter-spacing:-.01em;">Modular, not cumulative — take what the project needs.</h3>
+            <p style="font-size:13.5px; color:#b8bcd6; line-height:1.7; margin-top:16px; font-weight:300;">This isn't a step up from tiers one or two. It's a different kind of work entirely, rooted in my architecture background. A 3D digital twin recreates a real space or object for walkthroughs and visualization, motion graphics covers brand films and product animation, and spatial interaction design covers AR and other space aware experiences.</p>
+            <p style="font-size:13.5px; color:#b8bcd6; line-height:1.7; margin-top:12px; font-weight:300;">Each module is scoped and quoted on its own, whether it stands alone or sits alongside a design or AI engagement.</p>
+            <div style="margin-top:18px;">
+              <div style="font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:#9b8ec9; margin-bottom:8px;">Typical timeline per module</div>
+              <div style="display:flex; gap:6px;">
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">3D TWIN</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">~2–3 wks</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">MOTION</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">~1–2 wks</div></div>
+                <div style="flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.25); border-radius:10px; padding:8px 6px; text-align:center;"><div style="font-size:9.5px; color:#a855f7; font-weight:600; margin-bottom:3px;">SPATIAL</div><div style="font-size:10px; color:#b8bcd6; line-height:1.3;">~3–4 wks</div></div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:14px 16px; background:rgba(168,85,247,.14); border-radius:11px; font-size:12.5px; color:#d6d4ee; line-height:1.55;"><strong style="color:#a855f7;">Best for:</strong> Real estate &amp; architecture teams, brands needing a launch film, products that live partly in physical space.</div>
+            <div style="flex:1;"></div>
+            <div style="display:flex; align-items:center; gap:12px; margin-top:20px;">
+              <a href="#booking" style="display:inline-flex; align-items:center; gap:8px; background:#a855f7; color:#15142a; text-decoration:none; font-size:13.5px; padding:12px 22px; border-radius:100px; font-weight:500;">Book this</a>
+              <button class="svc-flip" style="display:inline-flex; align-items:center; gap:7px; background:transparent; border:none; color:#a9a8c8; font-family:'DM Sans',sans-serif; font-size:13px; cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-9-9"/><polyline points="21 4 21 9 16 9"/></svg> Back</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <p data-reveal style="text-align:center; margin-top:26px; font-size:13.5px; color:#8890a3;">Custom scopes welcome — just ask.</p>
+  </section>
+
+  <!-- HOW THIS WORKS -->
+  <section id="how" style="max-width:920px; margin:0 auto; padding:50px 40px 30px;">
+    <div data-reveal style="background:#15142a; color:#eef0f8; border-radius:22px; padding:clamp(34px,5vw,56px); position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 85% 15%, rgba(168,85,247,.16), transparent 65%); pointer-events:none;"></div>
+      <div style="position:relative;">
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:18px;"><span style="width:7px; height:7px; border-radius:50%; background:linear-gradient(135deg,#6d5ef0,#a855f7);"></span><span style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#c3b0f5;">How this works</span></div>
+        <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:400; letter-spacing:-.02em; line-height:1.05; max-width:18ch;">A focused 15 minute conversation</h2>
+        <p style="max-width:600px; margin-top:20px; font-size:16px; line-height:1.75; color:#b8bcd6; font-weight:300;">During this call, I examine what you are building, the problem it is intended to solve, and the criteria for success.</p>
+        <p style="max-width:600px; margin-top:14px; font-size:16px; line-height:1.75; color:#b8bcd6; font-weight:300;">My goal is to keep the proposal process short. Instead, this call leads to a focused assessment, a clear recommendation, and a practical next step.</p>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:34px;">
+          <div style="border:1px solid rgba(255,255,255,.14); border-radius:13px; padding:18px;"><div style="font-family:'Instrument Serif',serif; font-size:1.4rem; color:#a855f7; margin-bottom:6px;">Assessment</div><div style="font-size:13px; color:#a9a8c8; line-height:1.5;">A clear read on your product challenge</div></div>
+          <div style="border:1px solid rgba(255,255,255,.14); border-radius:13px; padding:18px;"><div style="font-family:'Instrument Serif',serif; font-size:1.4rem; color:#a855f7; margin-bottom:6px;">Recommendation</div><div style="font-size:13px; color:#a9a8c8; line-height:1.5;">The right service for where you are</div></div>
+          <div style="border:1px solid rgba(255,255,255,.14); border-radius:13px; padding:18px;"><div style="font-family:'Instrument Serif',serif; font-size:1.4rem; color:#a855f7; margin-bottom:6px;">Next step</div><div style="font-size:13px; color:#a9a8c8; line-height:1.5;">A practical path forward, no fluff</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" style="max-width:920px; margin:0 auto; padding:70px 40px 110px;">
+    <div data-reveal style="text-align:center; margin-bottom:42px;">
+      <div style="display:flex; align-items:center; gap:9px; justify-content:center; margin-bottom:18px;"><span style="width:7px; height:7px; border-radius:50%; background:linear-gradient(135deg,#6d5ef0,#a855f7); animation:pulseDot 1.8s infinite;"></span><span style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6d5ef0;">Book a Call</span></div>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(2.2rem,4.5vw,3.4rem); font-weight:400; letter-spacing:-.02em;">Book a <em style="font-style:italic; color:#6d5ef0;">time</em></h2>
+      <p style="max-width:480px; margin:18px auto 0; color:#5b606f; font-size:16px; line-height:1.7; font-weight:300;">A free 15 minute intro call. Complete the project brief above, then request a day and time that works for you — I will personally approve it before it's locked in. Requests open up to 3 months ahead.</p>
+    </div>
+
+    <div data-reveal style="position:relative; background:#f4f5fa; border:1px solid #d8dbe6; border-radius:22px; padding:clamp(26px,4vw,42px); box-shadow:0 24px 60px rgba(40,38,70,.10); overflow:hidden;">
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#6d5ef0,#a855f7);"></div>
+
+      <!-- LOCK overlay until the brief is completed -->
+      <div id="bookingLock" style="position:absolute; inset:0; z-index:5; border-radius:22px; background:rgba(238,240,246,.85); backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:30px;">
+        <div style="width:52px; height:52px; border-radius:50%; border:1px solid #c7cbe0; display:flex; align-items:center; justify-content:center; color:#6d5ef0; margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <div style="font-family:'Instrument Serif',serif; font-size:1.6rem; margin-bottom:8px;">Booking unlocks after the brief</div>
+        <p style="max-width:380px; color:#5b606f; font-size:14.5px; line-height:1.6; font-weight:300; margin-bottom:22px;">Complete the four quick questions above so I arrive prepared, then the calendar opens right here.</p>
+        <button onClick="{{ goToBrief }}" style="display:inline-flex; align-items:center; gap:9px; background:#1c1e27; color:#f4f5fb; border:none; border-radius:100px; padding:13px 26px; font-family:'DM Sans',sans-serif; font-size:14px; cursor:pointer;">Start the brief <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+      </div>
+
+      <!-- calendar header -->
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:18px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <select id="monthSel" onChange="{{ onMonthYear }}" style="background:#fff; border:1px solid #d8dbe6; border-radius:10px; padding:9px 12px; font-family:'DM Sans',sans-serif; font-size:14px; color:#1c1e27; outline:none; cursor:pointer;"></select>
+          <select id="yearSel" onChange="{{ onMonthYear }}" style="background:#fff; border:1px solid #d8dbe6; border-radius:10px; padding:9px 12px; font-family:'DM Sans',sans-serif; font-size:14px; color:#1c1e27; outline:none; cursor:pointer;"></select>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <button id="prevMo" onClick="{{ onPrev }}" style="width:38px; height:38px; border:1px solid #d8dbe6; background:#fff; border-radius:10px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#525569;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button id="nextMo" onClick="{{ onNextMo }}" style="width:38px; height:38px; border:1px solid #d8dbe6; background:#fff; border-radius:10px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#525569;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- weekday header -->
+      <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin-bottom:6px;">
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Sun</div>
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Mon</div>
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Tue</div>
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Wed</div>
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Thu</div>
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Fri</div>
+        <div style="text-align:center; font-size:11px; letter-spacing:.05em; color:#8890a3; text-transform:uppercase;">Sat</div>
+      </div>
+      <div id="calGrid" style="display:grid; grid-template-columns:repeat(7,1fr); gap:6px;"></div>
+
+      <div id="timesWrap" style="margin-top:26px; display:none;">
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:#8890a3; margin-bottom:12px;">Available times <span style="text-transform:none; letter-spacing:0; color:#6d5ef0;">(Rome time · CET/CEST)</span> <span id="dayContext" style="color:#6d5ef0; text-transform:none; letter-spacing:0;"></span></div>
+        <div id="slotGrid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px;"></div>
+      </div>
+
+      <div id="confirmBox" style="display:none; margin-top:26px; padding:22px; border:1px solid #c7cbe0; border-radius:14px; background:#fff;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;"><span style="width:22px; height:22px; border-radius:50%; background:#7fbf8f; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px;">✓</span><span style="font-weight:500; font-size:15px;">You're requesting</span></div>
+        <div id="confirmText" style="font-size:15px; color:#525569; margin-bottom:10px; padding-left:32px;"></div>
+        <div style="font-size:13px; color:#8890a3; margin-bottom:18px; padding-left:32px;">This sends me a request — I'll approve it and confirm by email before it's on the calendar.</div>
+        <button id="confirmBtn" onClick="{{ onConfirm }}" style="margin-left:32px; display:inline-flex; align-items:center; gap:10px; background:#1c1e27; color:#f4f5fb; border:none; border-radius:100px; padding:13px 28px; font-family:'DM Sans',sans-serif; font-size:14px; cursor:pointer;">Send request
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+
+      <div id="bookedBox" style="display:none; margin-top:26px; padding:28px; border:1px solid #c7cbe0; border-radius:14px; background:linear-gradient(135deg,#eef0f8,#ede0fb); text-align:center;">
+        <div style="font-family:'Instrument Serif',serif; font-size:1.7rem; margin-bottom:8px;">Request sent ✔</div>
+        <div id="bookedText" style="font-size:15px; color:#525569;"></div>
+        <div style="font-size:13.5px; color:#6f7488; margin-top:10px;">I've been notified by email and will approve or reschedule within a day. You'll get a confirmation email once it's locked in.</div>
+        <div style="display:flex; gap:10px; justify-content:center; margin-top:20px; flex-wrap:wrap;">
+          <button onClick="{{ downloadICS }}" style="display:inline-flex; align-items:center; gap:8px; background:#1c1e27; color:#f4f5fb; border:none; border-radius:100px; padding:12px 22px; font-family:'DM Sans',sans-serif; font-size:13.5px; cursor:pointer;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Add to Apple Calendar</button>
+          <a id="gcalLink" href="#" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#1c1e27; border:1px solid #a8adc4; border-radius:100px; padding:12px 22px; font-family:'DM Sans',sans-serif; font-size:13.5px; text-decoration:none;">Google Calendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:28px 40px; border-top:1px solid #d2d6e3; display:flex; justify-content:space-between; align-items:center; color:#8890a3; font-size:13px; max-width:1180px; margin:0 auto;">
+    <span>© 2026 Edima Essien</span>
+    <a href="index.html" style="color:#8890a3; text-decoration:none;">← Back to portfolio</a>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    step: 1,
+    answers: { projectType:'', engagement:'', timeline:'', budget:'' },
+    viewY: null, viewM: null,
+    selectedDate: null,
+    selectedSlot: null,
+    booked: false,
+    formDone: false
+  };
+
+  NOTIFY_EMAIL = 'edimaessien@utexas.edu';
+
+  buildBriefMessage() {
+    const a = this.state.answers;
+    const company = (document.getElementById('f_company')?.value || '').trim();
+    const details = (document.getElementById('f_details')?.value || '').trim();
+    return [
+      'Project type: ' + a.projectType,
+      'Engagement: ' + a.engagement,
+      'Timeline: ' + a.timeline,
+      'Budget: ' + a.budget,
+      company ? 'Company / project: ' + company : '',
+      details ? 'Details: ' + details : ''
+    ].filter(Boolean).join('\n');
+  }
+
+  async sendNotification(subject, fields) {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/' + this.NOTIFY_EMAIL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: subject,
+          _captcha: 'false',
+          ...fields
+        })
+      });
+      return response.ok;
+    } catch (err) {
+      console.error('[contact] email notification failed:', err);
+      return false;
+    }
+  }
+
+  componentDidMount() {
+    // reveals
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const reveal = (el) => { const d = parseInt(el.getAttribute('data-reveal-delay')||'0',10); el.style.transitionDelay = d+'ms'; el.classList.add('rv'); };
+    const force = (el) => { el.style.transition='none'; el.classList.add('rv'); el.style.opacity='1'; el.style.transform='none'; };
+    const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}})},{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+    this._io = io;
+    const vh = window.innerHeight||800; const af=[];
+    els.forEach(el=>{ if(el.getBoundingClientRect().top<vh*0.95){reveal(el);af.push(el);} else io.observe(el); });
+    this._fb = setTimeout(()=>{ const p=af[0]; if(p && parseFloat(getComputedStyle(p).opacity||'1')<0.5) els.forEach(force); },1400);
+
+    // wire option selects (event delegation)
+    document.querySelectorAll('.opt').forEach(opt=>{
+      opt.addEventListener('click', ()=>{
+        const f = opt.getAttribute('data-field');
+        const v = opt.getAttribute('data-value');
+        // clear siblings with same field
+        document.querySelectorAll('.opt[data-field="'+f+'"]').forEach(o=>{ o.style.borderColor='#d8dbe6'; o.style.background='transparent'; });
+        opt.style.borderColor='#6d5ef0'; opt.style.background='rgba(109,94,240,.07)';
+        this.setState(s=>({ answers:{...s.answers, [f]:v} }));
+      });
+    });
+
+    // Service cards: flip to reveal the full story on the back
+    document.querySelectorAll('.svc').forEach(card=>{
+      const inner = card.querySelector('.svc-inner');
+      const front = card.querySelector('.svc-face:not(.svc-back)');
+      const flip = () => {
+        const flipped = card.getAttribute('data-flipped')==='1';
+        card.setAttribute('data-flipped', flipped?'0':'1');
+        inner.style.transform = flipped ? 'rotateY(0deg)' : 'rotateY(180deg)';
+        if(!flipped) this.setState(s=>({answers:{...s.answers, projectType:card.getAttribute('data-svc')}}));
+      };
+      // explicit flip buttons on both faces
+      card.querySelectorAll('.svc-flip').forEach(b=>{
+        b.addEventListener('click', (e)=>{ e.stopPropagation(); flip(); });
+      });
+      // clicking the front (but not a link) also flips
+      if(front) front.addEventListener('click', (e)=>{ if(e.target.closest('a, .svc-flip')) return; flip(); });
+      // hover lift (transform only — never filter/box-shadow on the 3D element, breaks preserve-3d)
+      card.addEventListener('mouseenter', ()=>{ card.style.transform='translateY(-4px)'; card.style.transition='transform .3s'; });
+      card.addEventListener('mouseleave', ()=>{ card.style.transform='none'; });
+    });
+
+    this.initCalendar();
+  }
+
+  syncStepUI() {
+    const st = this.state.step;
+    document.querySelectorAll('.step').forEach(s=>{ s.style.display = (parseInt(s.getAttribute('data-step'),10)===st)?'block':'none'; });
+    const fill = document.getElementById('barfill'); if(fill) fill.style.width = (st*25)+'%';
+    const num = document.getElementById('stepnum'); if(num) num.textContent = '0'+st+' / 04';
+    const back = document.getElementById('backBtn'); if(back) back.style.visibility = st>1?'visible':'hidden';
+    const lbl = document.getElementById('nextLabel'); if(lbl) lbl.textContent = st===4?'Submit':'Continue';
+  }
+
+  onNext = async () => {
+    const st = this.state.step;
+    const a = this.state.answers;
+    const msg = document.getElementById('formMsg');
+    if(st===1 && !a.projectType){ msg.textContent='Pick a project type to continue.'; return; }
+    if(st===2 && (!a.engagement||!a.timeline)){ msg.textContent='Select an engagement and timeline.'; return; }
+    if(st===3 && !a.budget){ msg.textContent='Choose a budget range.'; return; }
+    if(st===4){
+      const name=document.getElementById('f_name').value.trim();
+      const email=document.getElementById('f_email').value.trim();
+      if(!name||!email){ msg.textContent='Name and email are required.'; return; }
+      const btn = document.getElementById('nextBtn');
+      const lbl = document.getElementById('nextLabel');
+      if(btn) btn.disabled = true;
+      if(lbl) lbl.textContent = 'Sending...';
+      msg.textContent = '';
+      msg.style.color = '#6d5ef0';
+
+      const sent = await this.sendNotification('Portfolio brief: ' + name, {
+        name,
+        email,
+        _replyto: email,
+        message: this.buildBriefMessage(),
+        requestType: 'Project brief'
+      });
+
+      if(btn) btn.disabled = false;
+      if(!sent){
+        if(lbl) lbl.textContent = 'Submit';
+        msg.textContent = 'Could not send right now. Please try again or email ' + this.NOTIFY_EMAIL + ' directly.';
+        msg.style.color = '#c0392b';
+        return;
+      }
+
+      this.clientName = name; this.clientEmail = email;
+      const brief=document.getElementById('briefCard');
+      const thanks=document.getElementById('thanksCard');
+      const nm=document.getElementById('thanksName'); if(nm) nm.textContent=name.split(' ')[0];
+      if(brief) brief.style.display='none';
+      if(thanks){ thanks.style.display='block'; thanks.classList.add('rv'); }
+      this.unlockBooking();
+      return;
+    }
+    msg.textContent='';
+    this.setState(s=>({step:s.step+1}), ()=>this.syncStepUI());
+  };
+
+  onBack = () => {
+    const msg=document.getElementById('formMsg'); if(msg){msg.textContent='';msg.style.color='#6d5ef0';}
+    this.setState(s=>({step:Math.max(1,s.step-1)}), ()=>this.syncStepUI());
+  };
+
+  // ---- Gating ----
+  unlockBooking() {
+    this.setState({formDone:true});
+    const lock = document.getElementById('bookingLock');
+    if(lock){ lock.style.opacity='0'; lock.style.transition='opacity .5s ease'; setTimeout(()=>{ lock.style.display='none'; }, 500); }
+  }
+  goToBrief = () => { document.getElementById('top') ? null : null; const f=document.querySelector('.step'); const sec=document.querySelector('section'); document.querySelectorAll('section')[0].scrollIntoView({behavior:'smooth'}); };
+
+  // ---- Calendar ----
+  initCalendar() {
+    const t = new Date(); t.setHours(0,0,0,0);
+    this.minDate = t;
+    this.maxDate = new Date(t); this.maxDate.setMonth(this.maxDate.getMonth()+3);
+    this.setState({viewY:t.getFullYear(), viewM:t.getMonth()}, ()=>{
+      this.populateSelectors();
+      this.renderCalendar();
+    });
+  }
+
+  populateSelectors() {
+    const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const mSel=document.getElementById('monthSel'), ySel=document.getElementById('yearSel');
+    if(!mSel||!ySel) return;
+    mSel.innerHTML = months.map((m,i)=>'<option value="'+i+'">'+m+'</option>').join('');
+    const y0=this.minDate.getFullYear(), y1=this.maxDate.getFullYear();
+    let yopt=''; for(let y=y0;y<=y1;y++){ yopt+='<option value="'+y+'">'+y+'</option>'; }
+    ySel.innerHTML=yopt;
+    mSel.value=this.state.viewM; ySel.value=this.state.viewY;
+  }
+
+  clampToRange(y,m) {
+    const first=new Date(y,m,1);
+    const minFirst=new Date(this.minDate.getFullYear(),this.minDate.getMonth(),1);
+    const maxFirst=new Date(this.maxDate.getFullYear(),this.maxDate.getMonth(),1);
+    if(first<minFirst) return [minFirst.getFullYear(),minFirst.getMonth()];
+    if(first>maxFirst) return [maxFirst.getFullYear(),maxFirst.getMonth()];
+    return [y,m];
+  }
+
+  setView(y,m) {
+    const [cy,cm]=this.clampToRange(y,m);
+    this.setState({viewY:cy, viewM:cm}, ()=>{
+      const mSel=document.getElementById('monthSel'), ySel=document.getElementById('yearSel');
+      if(mSel) mSel.value=cm; if(ySel) ySel.value=cy;
+      this.renderCalendar();
+    });
+  }
+
+  onPrev = () => this.setView(this.state.viewY, this.state.viewM-1);
+  onNextMo = () => this.setView(this.state.viewY, this.state.viewM+1);
+  onMonthYear = () => {
+    const m=parseInt(document.getElementById('monthSel').value,10);
+    const y=parseInt(document.getElementById('yearSel').value,10);
+    this.setView(y,m);
+  };
+
+  sameDay(a,b){ return a&&b&&a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate(); }
+
+  renderCalendar() {
+    const grid=document.getElementById('calGrid');
+    if(!grid) return;
+    const y=this.state.viewY, m=this.state.viewM;
+    const firstDow=new Date(y,m,1).getDay(); // Sunday-first
+    const days=new Date(y,m+1,0).getDate();
+    grid.innerHTML='';
+    for(let i=0;i<firstDow;i++){ const e=document.createElement('div'); grid.appendChild(e); }
+    for(let d=1; d<=days; d++){
+      const date=new Date(y,m,d); date.setHours(0,0,0,0);
+      const wd=date.getDay();
+      const weekend=(wd===0||wd===6);
+      const inRange=date>=this.minDate && date<=this.maxDate;
+      const selectable=!weekend && inRange;
+      const sel=this.sameDay(date,this.state.selectedDate);
+      const cell=document.createElement('button');
+      cell.type='button';
+      cell.textContent=d;
+      cell.style.cssText='aspect-ratio:1/1; border-radius:11px; font-family:DM Sans,sans-serif; font-size:14px; display:flex; align-items:center; justify-content:center; transition:border-color .2s, background .2s, color .2s; '
+        + (selectable
+            ? 'cursor:pointer; border:1px solid '+(sel?'#6d5ef0':'#dde0ea')+'; background:'+(sel?'#6d5ef0':'#fff')+'; color:'+(sel?'#fff':'#1c1e27')+';'
+            : 'cursor:default; border:1px solid transparent; background:transparent; color:#c7cbe0;');
+      if(selectable){
+        cell.className='caldaybtn';
+        cell.addEventListener('click', ()=>this.selectDate(date));
+        cell.addEventListener('mouseenter', ()=>{ if(!this.sameDay(date,this.state.selectedDate)) cell.style.borderColor='#6d5ef0'; });
+        cell.addEventListener('mouseleave', ()=>{ if(!this.sameDay(date,this.state.selectedDate)) cell.style.borderColor='#dde0ea'; });
+      }
+      grid.appendChild(cell);
+    }
+    // nav button enabled state
+    const minFirst=new Date(this.minDate.getFullYear(),this.minDate.getMonth(),1);
+    const maxFirst=new Date(this.maxDate.getFullYear(),this.maxDate.getMonth(),1);
+    const cur=new Date(y,m,1);
+    const prev=document.getElementById('prevMo'), next=document.getElementById('nextMo');
+    if(prev){ const dis=cur<=minFirst; prev.style.opacity=dis?'.35':'1'; prev.style.pointerEvents=dis?'none':'auto'; }
+    if(next){ const dis=cur>=maxFirst; next.style.opacity=dis?'.35':'1'; next.style.pointerEvents=dis?'none':'auto'; }
+  }
+
+  selectDate(date) {
+    this.setState({selectedDate:date, selectedSlot:null}, ()=>{
+      this.renderCalendar();
+      const wrap=document.getElementById('timesWrap'); if(wrap) wrap.style.display='block';
+      const ctx=document.getElementById('dayContext');
+      if(ctx) ctx.textContent='· '+date.toLocaleString('en-US',{weekday:'long', month:'short', day:'numeric'});
+      this.renderSlots();
+      this.updateConfirm();
+    });
+  }
+
+  renderSlots() {
+    const grid=document.getElementById('slotGrid');
+    if(!grid || !this.state.selectedDate) return;
+    // Two 15-min request windows per hour, 9:00 AM through 1:30 PM (last window before 2 PM), Rome time
+    const times=[];
+    for(let mins=9*60; mins<14*60; mins+=60){
+      [0,30].forEach(offset=>{
+        const m=mins+offset;
+        let h=Math.floor(m/60), mn=m%60; const ap=h>=12?'PM':'AM'; let h12=h%12; if(h12===0)h12=12;
+        times.push(h12+':'+String(mn).padStart(2,'0')+' '+ap);
+      });
+    }
+    const seed=this.state.selectedDate.getDate()+this.state.selectedDate.getMonth();
+    grid.innerHTML='';
+    times.forEach((t,i)=>{
+      if((i+seed)%3===0) return; // pseudo-availability
+      const b=document.createElement('button');
+      b.type='button';
+      b.style.cssText='cursor:pointer; border:1px solid #d8dbe6; background:#fff; border-radius:11px; padding:13px 6px; font-family:DM Sans,sans-serif; font-size:14px; color:#1c1e27; transition:border-color .2s, background .2s;';
+      b.textContent=t;
+      b.addEventListener('click', ()=>{
+        grid.querySelectorAll('button').forEach(s=>{s.style.borderColor='#d8dbe6'; s.style.background='#fff'; s.style.color='#1c1e27';});
+        b.style.borderColor='#6d5ef0'; b.style.background='#6d5ef0'; b.style.color='#fff';
+        this.setState({selectedSlot:t}, ()=>this.updateConfirm());
+      });
+      grid.appendChild(b);
+    });
+  }
+
+  updateConfirm() {
+    const box=document.getElementById('confirmBox'), txt=document.getElementById('confirmText');
+    if(this.state.selectedDate && this.state.selectedSlot && !this.state.booked){
+      box.style.display='block';
+      txt.textContent=this.state.selectedDate.toLocaleString('en-US',{weekday:'long', month:'long', day:'numeric'})+' at '+this.state.selectedSlot+' · 15 min intro call (request)';
+    } else if(box){ box.style.display='none'; }
+  }
+
+  // parse "9:00 AM" -> {h,m}
+  parseSlot(s){ const m=s.match(/(\d+):(\d+)\s*(AM|PM)/i); let h=parseInt(m[1],10); const mn=parseInt(m[2],10); if(/PM/i.test(m[3])&&h!==12)h+=12; if(/AM/i.test(m[3])&&h===12)h=0; return {h,mn}; }
+
+  eventTimes() {
+    const d=this.state.selectedDate; const {h,mn}=this.parseSlot(this.state.selectedSlot);
+    const start=new Date(d.getFullYear(),d.getMonth(),d.getDate(),h,mn,0);
+    const end=new Date(start.getTime()+15*60000);
+    const fmt=(x)=>x.getFullYear()+String(x.getMonth()+1).padStart(2,'0')+String(x.getDate()).padStart(2,'0')+'T'+String(x.getHours()).padStart(2,'0')+String(x.getMinutes()).padStart(2,'0')+'00';
+    return {start,end,fmtStart:fmt(start),fmtEnd:fmt(end)};
+  }
+
+  onConfirm = async () => {
+    const confirmBtn = document.getElementById('confirmBtn');
+    const dateLabel = this.state.selectedDate.toLocaleString('en-US',{weekday:'long', month:'long', day:'numeric'}) + ' at ' + this.state.selectedSlot;
+    if(confirmBtn){
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = 'Sending...';
+    }
+
+    const a = this.state.answers;
+    const sent = await this.sendNotification('Call request: ' + (this.clientName || 'Guest') + ' — ' + dateLabel, {
+      name: this.clientName || '',
+      email: this.clientEmail || '',
+      _replyto: this.clientEmail || '',
+      requestedTime: dateLabel + ' (Rome time · CET/CEST)',
+      projectType: a.projectType,
+      engagement: a.engagement,
+      timeline: a.timeline,
+      budget: a.budget,
+      message: this.buildBriefMessage(),
+      requestType: 'Call booking request'
+    });
+
+    if(!sent){
+      if(confirmBtn){
+        confirmBtn.disabled = false;
+        confirmBtn.innerHTML = 'Send request<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg>';
+      }
+      alert('Could not send your request right now. Please try again or email ' + this.NOTIFY_EMAIL + ' directly.');
+      return;
+    }
+
+    document.getElementById('confirmBox').style.display='none';
+    const bb=document.getElementById('bookedBox');
+    bb.style.display='block';
+    document.getElementById('bookedText').textContent=dateLabel;
+    const {fmtStart,fmtEnd}=this.eventTimes();
+    const title=encodeURIComponent('Intro call with Edima Essien');
+    const details=encodeURIComponent('15 minute intro call to discuss your project'+(this.state.answers.projectType?(' ('+this.state.answers.projectType+')'):'')+'.');
+    const g=document.getElementById('gcalLink');
+    if(g) g.href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+title+'&dates='+fmtStart+'/'+fmtEnd+'&details='+details;
+    this.setState({booked:true});
+    bb.scrollIntoView({behavior:'smooth', block:'center'});
+  };
+
+  downloadICS = () => {
+    if(!this.state.selectedDate||!this.state.selectedSlot) return;
+    const {fmtStart,fmtEnd}=this.eventTimes();
+    const stamp=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+    const uid='edima-'+Date.now()+'@portfolio';
+    const desc='Requested: 15 minute intro call to discuss your project'+(this.state.answers.projectType?(' ('+this.state.answers.projectType+')'):'')+'. Pending approval from Edima.';
+    const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Edima Essien//Booking//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT','UID:'+uid,'DTSTAMP:'+stamp,'DTSTART:'+fmtStart,'DTEND:'+fmtEnd,'SUMMARY:Requested: Intro call with Edima Essien','DESCRIPTION:'+desc,'LOCATION:Video call','STATUS:TENTATIVE','END:VEVENT','END:VCALENDAR'].join('\r\n');
+    const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a'); a.href=url; a.download='intro-call-edima-essien.ics';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 1000);
+  };
+
+  componentWillUnmount(){ if(this._io)this._io.disconnect(); if(this._fb)clearTimeout(this._fb); }
+
+  renderVals() {
+    return {
+      onNext: this.onNext, onBack: this.onBack, onConfirm: this.onConfirm,
+      onPrev: this.onPrev, onNextMo: this.onNextMo, onMonthYear: this.onMonthYear,
+      goToBrief: this.goToBrief, downloadICS: this.downloadICS
+    };
+  }
+}
+</script>
+</body>
+</html>
