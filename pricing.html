@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Edima Essien</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --bg-card-hover: #1a1a1a;
+  --text-primary: #f0ede6;
+  --text-secondary: #8a8780;
+  --text-muted: #5a5854;
+  --accent: #d4a017;
+  --accent-2: #00d4ff;
+  --accent-3: #a78bfa;
+  --border: #222;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background: rgba(10,10,10,0.7);
+  border-bottom: 1px solid var(--border);
+}
+nav .logo {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+nav .logo span { color: var(--accent); }
+nav .nav-links { display: flex; gap: 2rem; }
+nav .nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+nav .nav-links a:hover,
+nav .nav-links a.active { color: var(--text-primary); }
+
+.pricing-hero {
+  padding: 10rem 2.5rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pricing-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+.pricing-hero h1 em { font-style: italic; color: var(--accent); }
+.pricing-hero p {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.pricing {
+  padding: 2rem 2.5rem 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.pricing-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-card);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+.pricing-card:hover {
+  border-color: #444;
+  transform: translateY(-4px);
+}
+.pricing-card.featured {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 1px rgba(0,212,255,0.15);
+}
+.pricing-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.pricing-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+.pricing-icon.design { background: rgba(167,139,250,0.15); }
+.pricing-icon.frontend { background: rgba(0,212,255,0.12); }
+.pricing-icon.ai { background: rgba(212,160,23,0.15); }
+.pricing-badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.pricing-badge.blue { background: rgba(0,212,255,0.12); color: var(--accent-2); }
+.pricing-badge.purple { background: rgba(167,139,250,0.15); color: var(--accent-3); }
+.pricing-badge.green { background: rgba(74,222,128,0.12); color: #4ade80; }
+.pricing-card h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+.pricing-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.pricing-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+.pricing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.pricing-tags span {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-muted);
+}
+.pricing-checklist {
+  list-style: none;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+.pricing-checklist li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.45rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+.pricing-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+.pricing-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  margin-top: auto;
+}
+.pricing-price {
+  font-family: var(--serif);
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+.pricing-timeline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.pricing-competes {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+.pricing-competes span { color: var(--accent-2); flex-shrink: 0; }
+.pricing-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.pricing-cta:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(212,160,23,0.05);
+}
+.pricing-card.featured .pricing-cta {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+.pricing-card.featured .pricing-cta:hover {
+  background: rgba(0,212,255,0.08);
+}
+
+.pricing-note {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-card);
+}
+.pricing-note p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 1.25rem;
+}
+.pricing-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.pricing-note a:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.schedule {
+  padding: 2rem 2.5rem 6rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.schedule h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+.schedule h2 em { font-style: italic; color: var(--accent); }
+.schedule > p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.calendar-embed {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  min-height: 500px;
+  text-align: left;
+}
+.calendar-embed iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+}
+.calendar-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.calendar-placeholder strong {
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.calendar-placeholder code {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+footer {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 1100px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
+}
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .pricing-hero, .pricing, .schedule { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Edima<span>.</span></a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#process">Process</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="pricing-hero">
+  <h1>Services & <em>pricing</em></h1>
+  <p>Fixed-scope engagements for teams that need senior product design and creative front-end craft — without the overhead of a full-time hire.</p>
+</section>
+
+<section class="pricing">
+  <div class="pricing-grid">
+
+    <article class="pricing-card">
+      <div class="pricing-card-header">
+        <div class="pricing-icon design">◫</div>
+        <span class="pricing-badge purple">Product design</span>
+      </div>
+      <h3>Product design sprint</h3>
+      <p class="pricing-subtitle">Web · Mobile · SaaS</p>
+      <p class="pricing-desc">From brief to polished, dev-ready product in two weeks. Full UX — flows, UI, and a clickable prototype your team can build from.</p>
+      <div class="pricing-tags">
+        <span>Figma</span><span>UX flows</span><span>Prototyping</span><span>Design systems</span><span>Dev handoff</span>
+      </div>
+      <ul class="pricing-checklist">
+        <li>Up to 10 screens, desktop + mobile</li>
+        <li>Clickable Figma prototype</li>
+        <li>Component library + tokens</li>
+        <li>2 rounds of revisions</li>
+      </ul>
+      <div class="pricing-footer">
+        <div class="pricing-price">€5,500</div>
+        <div class="pricing-timeline">2 weeks</div>
+        <p class="pricing-competes"><span>◎</span> Competes with: Senior Product Designer roles ($80–120k)</p>
+        <a href="#schedule" class="pricing-cta">Book intro call</a>
+      </div>
+    </article>
+
+    <article class="pricing-card featured">
+      <div class="pricing-card-header">
+        <div class="pricing-icon frontend">&lt;/&gt;</div>
+        <span class="pricing-badge blue">Most requested</span>
+      </div>
+      <h3>Creative front-end build</h3>
+      <p class="pricing-subtitle">React · Next.js · Framer</p>
+      <p class="pricing-desc">I design and build your product front-end in clean React or Next.js — live, production-ready, and crafted down to the interaction details.</p>
+      <div class="pricing-tags">
+        <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>Framer</span><span>Figma</span>
+      </div>
+      <ul class="pricing-checklist">
+        <li>Full design + front-end implementation</li>
+        <li>Responsive, accessible, performant</li>
+        <li>GitHub repo + deployment</li>
+        <li>30-day post-launch support</li>
+      </ul>
+      <div class="pricing-footer">
+        <div class="pricing-price">€8,000</div>
+        <div class="pricing-timeline">3–4 weeks</div>
+        <p class="pricing-competes"><span>◎</span> Competes with: Creative Front-End Engineer roles ($90–140k)</p>
+        <a href="#schedule" class="pricing-cta">Book intro call</a>
+      </div>
+    </article>
+
+    <article class="pricing-card">
+      <div class="pricing-card-header">
+        <div class="pricing-icon ai">◉</div>
+        <span class="pricing-badge green">High demand</span>
+      </div>
+      <h3>AI product interface</h3>
+      <p class="pricing-subtitle">LLM · Copilots · Agents</p>
+      <p class="pricing-desc">Design and build interfaces for AI-powered products — chat UIs, copilot sidebars, agent dashboards, and streaming interaction patterns.</p>
+      <div class="pricing-tags">
+        <span>AI/LLM UI</span><span>React</span><span>Prompt design</span><span>Streaming UI</span><span>Figma</span>
+      </div>
+      <ul class="pricing-checklist">
+        <li>AI interaction design + flows</li>
+        <li>Working front-end prototype</li>
+        <li>Prompt/UX documentation</li>
+        <li>API integration-ready handoff</li>
+      </ul>
+      <div class="pricing-footer">
+        <div class="pricing-price">€9,500</div>
+        <div class="pricing-timeline">3–4 weeks</div>
+        <p class="pricing-competes"><span>◎</span> Competes with: AI Product Designer / Engineer roles ($100–150k)</p>
+        <a href="#schedule" class="pricing-cta">Book intro call</a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="pricing-note">
+    <p>Not sure which engagement fits? Book a free 30-minute intro call below — we'll scope it together. Custom retainers and team workshops available on request.</p>
+    <a href="#schedule">Schedule intro call →</a>
+  </div>
+</section>
+
+<section class="schedule" id="schedule">
+  <h2>Schedule an <em>intro call</em></h2>
+  <p>Pick a time that works for you. My calendar syncs automatically — booked slots won't show as available.</p>
+  <div class="calendar-embed" id="calendar-embed">
+    <!-- Replace YOUR_USERNAME and intro-call with your Cal.com username and event slug -->
+    <iframe
+      id="cal-embed"
+      src="https://cal.com/YOUR_USERNAME/intro-call?embed=true&theme=dark"
+      title="Schedule a call with Edima Essien"
+      loading="lazy"
+      style="display:none;"
+    ></iframe>
+    <div class="calendar-placeholder" id="cal-placeholder">
+      <strong>Cal.com scheduling</strong>
+      Set up your Cal.com account, then replace <code>YOUR_USERNAME</code> in pricing.html to activate the calendar.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Edima Essien</span>
+  <span>Designed with care</span>
+</footer>
+
+<script>
+// Show Cal.com embed once YOUR_USERNAME is replaced with your Cal.com username
+(function() {
+  const iframe = document.getElementById('cal-embed');
+  const placeholder = document.getElementById('cal-placeholder');
+  if (iframe && placeholder && !iframe.src.includes('YOUR_USERNAME')) {
+    iframe.style.display = 'block';
+    placeholder.style.display = 'none';
+  }
+})();
+</script>
+
+</body>
+</html>

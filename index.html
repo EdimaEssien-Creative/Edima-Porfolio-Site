@@ -976,6 +976,49 @@ footer {
 .form-status.success { color: #4ade80; }
 .form-status.error { color: #ff6b6b; }
 
+/* ─── PRICING TEASER ─── */
+.pricing-teaser {
+  padding: 6rem 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pricing-teaser h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.pricing-teaser h2 em { font-style: italic; color: var(--accent); }
+.pricing-teaser p {
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.pricing-teaser-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+.pricing-teaser-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
 /* ─── DIVIDER ─── */
 .divider {
   max-width: 1400px;
@@ -992,7 +1035,7 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
   .hero { padding: 6rem 1.5rem 3rem; }
-  .about, .expertise, .projects, .process, .testimonials, .contact, .outside-work { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .about, .expertise, .projects, .process, .testimonials, .contact, .outside-work, .pricing-teaser { padding-left: 1.5rem; padding-right: 1.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .project-header { grid-template-columns: 1fr; }
   .project-tags { justify-content: flex-start; }
@@ -1015,6 +1058,7 @@ footer {
     <a onclick="scrollToSection('about')">About</a>
     <a onclick="scrollToSection('work')">Work</a>
     <a onclick="scrollToSection('process')">Process</a>
+    <a href="pricing.html">Pricing</a>
     <a onclick="scrollToSection('contact')">Contact</a>
   </div>
 </nav>
@@ -1601,10 +1645,19 @@ footer {
 
 <div class="divider"><hr></div>
 
+<!-- PRICING TEASER -->
+<section class="pricing-teaser">
+  <h2>Services & <em>pricing</em></h2>
+  <p>Fixed-scope engagements for product design sprints, creative front-end builds, and AI product interfaces.</p>
+  <a href="pricing.html" class="pricing-teaser-btn">View pricing →</a>
+</section>
+
+<div class="divider"><hr></div>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <h2>Let's build<br/>something <em>together</em></h2>
-  <p>I'm currently working as a creative technologist and open to product design collaborations where research and interaction craft are valued. Let's talk.</p>
+  <p>I'm currently working as a creative technologist and open to product design collaborations where research and interaction craft are valued. Let's talk — or <a href="pricing.html#schedule" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(212,160,23,0.3);">book an intro call</a> on the pricing page.</p>
 
   <div class="contact-form-wrapper">
     <form id="contact-form" class="contact-form">
@@ -1640,7 +1693,7 @@ footer {
     <a href="mailto:edimaessien@utexas.edu">Email</a>
     <a href="#">LinkedIn</a>
     <a href="#">Dribbble</a>
-    <a href="#">Read.cv</a>
+    <a href="cv.html">Read.cv</a>
   </div>
 </section>
 

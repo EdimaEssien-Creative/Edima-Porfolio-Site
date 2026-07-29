@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Edima Essien</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --text-primary: #f0ede6;
+  --text-secondary: #8a8780;
+  --text-muted: #5a5854;
+  --accent: #d4a017;
+  --border: #222;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+.cv-card {
+  max-width: 480px;
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-card);
+}
+.cv-card h1 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+.cv-card h1 em { font-style: italic; color: var(--accent); }
+.cv-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  margin-bottom: 1rem;
+}
+.cv-btn:hover { background: var(--accent); color: var(--bg); }
+.cv-back {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.cv-back:hover { color: var(--text-primary); }
+.cv-note {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<div class="cv-card">
+  <h1>My <em>CV</em></h1>
+  <p>My résumé is shared privately. If we've connected and I've sent you an access link or code, use the button below to view it.</p>
+  <!-- Replace PAPERSMARK_URL with your Papermark/DocSend gated document link after upload -->
+  <a href="https://papermark.io/view/YOUR_LINK" class="cv-btn" target="_blank" rel="noopener">View CV</a>
+  <p class="cv-note">Don't have access yet? <a href="index.html#contact" style="color: var(--accent);">Get in touch</a> and I'll send you a one-time link.</p>
+  <a href="index.html" class="cv-back">← Back to portfolio</a>
+</div>
+
+</body>
+</html>
